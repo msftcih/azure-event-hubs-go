@@ -97,7 +97,7 @@ func (fp *FilePersister) Read(namespace, name, consumerGroup, partitionID string
 
 	f, err := os.Open(filePath)
 	if err != nil {
-		return newCheckpoint(), err
+		return newCheckpoint, err
 	}
 
 	buf := bytes.NewBuffer(nil)
